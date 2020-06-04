@@ -1,0 +1,144 @@
+/*
+MIT License
+
+Copyright (c) 2020 Marc Steven Clemen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently */
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        display: inline-block;
+    }
+
+    .btn-container {
+        margin-top: 16pt;
+        margin-bottom: 4pt;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-container {
+        margin: 0 16pt;
+    }
+}
+
+body {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+    background: rgb(4, 50, 5);
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timer {
+    font-family: 'DSEG14 Modern';
+    src: url("/fonts/DSEG14 Modern.ttf");
+    font-size: 10vw;
+    font-weight: bold;
+    font-style: italic;
+
+    white-space: nowrap;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footertext {
+    font-family: 'DSEG14 Modern Mini';
+    font-size: 24pt;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+
+    white-space: nowrap;
+
+    padding: 24pt;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -100%);
+}
+
+.bg {
+    color: rgba(15, 101, 11, .5);
+}
+
+.fg {
+    color: rgb(32, 207, 23);
+    text-shadow: 0 0 16pt rgba(32, 207, 23, 0.6);
+    animation: nojs 1.5s;
+    /* animation: flash 2s ease-out; */
+}
+
+@keyframes flash {
+    from {text-shadow: 0 0 24pt rgba(32, 207, 23, 1);}
+    to {text-shadow: 0 0 16pt rgba(32, 207, 23, 0.6);}
+}
+
+@keyframes nojs {
+    0%  {visibility: hidden;}
+    99% {visibility: hidden;}
+    100%{visibility: visible;}
+}
+
+@font-face {
+    font-family: 'DSEG14 Modern Mini';
+    font-weight: bold;
+    font-style: italic;
+    src: url("/fonts/DSEG14ModernMini-BoldItalic.woff") format("woff");
+    src: url("/fonts/DSEG14ModernMini-BoldItalic.woff2") format("woff2");
+    src: url("/fonts/DSEG14ModernMini-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'DSEG14 Modern';
+    font-weight: bold;
+    font-style: italic;
+    src: url("/fonts/DSEG14Modern-BoldItalic.woff") format("woff");
+    src: url("/fonts/DSEG14Modern-BoldItalic.woff2") format("woff2");
+    src: url("/fonts/DSEG14Modern-BoldItalic.ttf") format("truetype");
+}
