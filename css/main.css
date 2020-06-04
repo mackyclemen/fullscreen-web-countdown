@@ -128,16 +128,16 @@ body {
     font-family: 'DSEG14 Modern Mini';
     font-weight: bold;
     font-style: italic;
-    src: url("./fonts/DSEG14ModernMini-BoldItalic.woff") format("woff");
-    src: url("./fonts/DSEG14ModernMini-BoldItalic.woff2") format("woff2");
-    src: url("./fonts/DSEG14ModernMini-BoldItalic.ttf") format("truetype");
+    src: url("/fullscreen-web-countdown/fonts/DSEG14ModernMini-BoldItalic.woff") format("woff");
+    src: url("/fullscreen-web-countdown/fonts/DSEG14ModernMini-BoldItalic.woff2") format("woff2");
+    src: url("/fullscreen-web-countdown/fonts/DSEG14ModernMini-BoldItalic.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: 'DSEG14 Modern';
+    font-family: 'DSEG14 Modern';
     font-weight: bold;
     font-style: italic;
-    src: url("./fonts/DSEG14Modern-BoldItalic.woff") format("woff");
-    src: url("./fonts/DSEG14Modern-BoldItalic.woff2") format("woff2");
-    src: url("./fonts/DSEG14Modern-BoldItalic.ttf") format("truetype");
+    src: url("/fullscreen-web-countdown/fonts/DSEG14Modern-BoldItalic.woff") format("woff");
+    src: url("/fullscreen-web-countdown/fonts/DSEG14Modern-BoldItalic.woff2") format("woff2");
+    src: url("/fullscreen-web-countdown/fonts/DSEG14Modern-BoldItalic.ttf") format("truetype");
 }
