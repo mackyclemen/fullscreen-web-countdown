@@ -28,7 +28,7 @@ $(document).ready(() => {
             shown = true;
         }
 
-        time = moment("2020-06-19T08:00:00+08:00").countdown();
-        $("#timer").html(`${trail(time.days, 2)}:${trail(time.hours, 2)}:${trail(time.minutes, 2)}:${trail(time.seconds, 2)}`);
+        time = moment();
+        $("#timer").html(`${trail(time.hours(), 2)}:${trail(time.minutes(), 2)}:${trail(time.seconds(), 2)}`);
     }, 1000);
 });
