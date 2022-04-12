@@ -14,21 +14,24 @@ The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 */
 
-var time;
 var shown = false;
 
-function trail(num, targetLength) {
-    return num.toString().padStart(targetLength, 0);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Contents loaded")
+    let fg = document.getElementsByClassName("fg")
+    let timer = document.getElementById("timer")
 
-$(document).ready(() => {
     setInterval(() => {
         if(!shown) {
-            $(".fg").css({"visibility": "visible", "animation": "flash 0.5s"});
+            for(let element of fg) {
+                element.style.visibility = "visible"
+                element.style.animation = "flash 0.5s"
+            }
+
             shown = true;
         }
-
-        time = moment();
-        $("#timer").html(`${trail(time.hours(), 2)}:${trail(time.minutes(), 2)}:${trail(time.seconds(), 2)}`);
+    
+        // Update time text (HH:mm:ss) - 24h format
+        timer.innerText = new Date().toLocaleTimeString('en-US', { hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit" })
     }, 1000);
-});
+})
